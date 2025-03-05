@@ -10,7 +10,7 @@ pipeline {
 
         stage('Deploy to Server') {
             steps {
-                sh 'scp -i ~/.ssh/id_rsa circularlist.py ubuntu@52.34.215.41:/home/ubuntu/circularlist.py'
+                sh 'scp -i ~/.ssh/id_rsa $WORKSPACE/circularlist.py ubuntu@52.34.215.41:/home/ubuntu/'
             }
         }
 
